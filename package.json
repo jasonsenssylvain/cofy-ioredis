@@ -1,0 +1,37 @@
+{
+  "name": "cofy-ioredis",
+  "version": "0.0.1",
+  "description": "cofy version of ioredis",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive -R spec --require should --harmony test/ --bail",
+    "test-cov": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha  -- -u exports --require should  --recursive test/ --bail",
+    "test-travis": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -u exports --require should  --recursive test/ --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasoncodingnow/cofy-ioredis.git"
+  },
+  "keywords": [
+    "ioredis",
+    "co",
+    "cofy",
+    "redis"
+  ],
+  "author": "jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasoncodingnow/cofy-ioredis/issues"
+  },
+  "homepage": "https://github.com/jasoncodingnow/cofy-ioredis#readme",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "mocha": "^2.3.4",
+    "should": "^8.1.1",
+    "supertest": "^1.1.0"
+  },
+  "dependencies": {
+    "cofy": "^2.0.2",
+    "ioredis": "^1.14.0"
+  }
+}
